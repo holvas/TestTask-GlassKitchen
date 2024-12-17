@@ -1,0 +1,38 @@
+/* Адаптивность */
+@media (min-width: 768px) {
+    .banner h1 {
+        font-size: 36px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+    .advantages {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .catalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .catalog {
+        display: flex;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .banner h1 {
+        font-size: 48px;
+    }
+
+    .banner p {
+        font-size: 20px;
+    }
+}
