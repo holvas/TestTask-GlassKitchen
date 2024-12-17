@@ -1,4 +1,3 @@
-/* Адаптивность */
 @media (min-width: 768px) {
     .banner h1 {
         font-size: 36px;
@@ -17,12 +16,12 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Ховаємо бургер-меню */
-    .burger-menu {
+    /* Hidden burger-menu */
+    .burger-menu, .close-menu {
         display: none;
     }
 
-    /* Показуємо горизонтальне меню */
+    /* Show menu */
     .header .menu ul {
         display: flex;
         flex-direction: row;
@@ -39,6 +38,11 @@
 }
 
 @media (min-width: 1200px) {
+    .wrap-header {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
     .catalog {
         display: flex;
         grid-template-columns: repeat(4, 1fr);

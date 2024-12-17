@@ -1,28 +1,21 @@
+const burgerMenu = document.querySelector('.burger-menu');
+const closeMenu = document.querySelector('.close-menu');
+const menuList = document.querySelector('.menu ul');
+const body = document.body;
 
-// // Burger Menu
-// const burger = document.querySelector('.burger-menu');
-// const menu = document.querySelector('.menu ul');
+// Open menu
+burgerMenu.addEventListener('click', () => {
+    menuList.classList.add('active');
+    closeMenu.style.display = 'block';
+    burgerMenu.style.display = 'none';
+    body.classList.add('no-scroll'); // Блокуємо скрол
+});
 
-// burger.addEventListener('click', () => {
-//     menu.classList.toggle('active');
-// });
-
-// // Smooth Scroll
-// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-//         document.querySelector(this.getAttribute('href')).scrollIntoView({
-//             behavior: 'smooth'
-//         });
-//     });
-// });
-
-// Burger Menu
-const burger = document.querySelector('.burger-menu');
-const menu = document.querySelector('.menu ul');
-
-burger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-    burger.classList.toggle('open'); // Optional: for animating the burger
+// Close menu
+closeMenu.addEventListener('click', () => {
+    menuList.classList.remove('active');
+    closeMenu.style.display = 'none';
+    burgerMenu.style.display = 'flex';
+    body.classList.remove('no-scroll'); // Відновлюємо скрол
 });
 

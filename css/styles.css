@@ -1,7 +1,7 @@
-/* Подключение шрифта Google */
+/* Google font*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* custom properties */
+/* Custom properties */
 :root {
     --color: #545c66;
     --color-btn: #007bff;
@@ -29,6 +29,7 @@ body {
 button, a.button {
     display: inline-block;
     padding: 10px 20px;
+    margin: 10px;
     background: var(--color-btn);
     color: #fff;
     text-decoration: none;
@@ -64,16 +65,26 @@ button:hover, a.button:hover {
     font-weight: bold;
 }
 
-/* .header .menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-} */
-
 /* Burger-menu */
+.close-menu {
+    display: none; 
+    position: absolute;
+    top: 52%;
+    right: 30%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001; 
+    transition: var(--transition);
+}
+
+/* When opening the menu, we show a cross */
+.menu ul.active + .close-menu {
+    display: block;
+}
+
+
 .burger-menu {
     display: flex;
     flex-direction: column;
@@ -119,15 +130,20 @@ button:hover, a.button:hover {
 
 }
 
-/* Відкрите меню */
+/* Open menu */
 .menu ul.active {
     display: flex;
     position: absolute;
-    top: 73%;
+    top: 54%;
     right: 26%;
 }
 
-/* Баннер */
+.no-scroll {
+    overflow: hidden;
+    height: 100vh; /* Фіксує висоту сторінки */
+}
+
+/* Banner */
 .banner {
     background: url('../img/banner.webp') no-repeat center center/cover;
     height: 100vh;
@@ -146,7 +162,7 @@ button:hover, a.button:hover {
     margin-bottom: 20px;
 }
 
-/* Преимущества */
+/* Advantages */
 .advantages {
     display: flex;
     flex-direction: column;
@@ -165,7 +181,7 @@ button:hover, a.button:hover {
     margin-bottom: 10px;
 }
 
-/* Каталог */
+/* Catalog */
 .catalog {
     display: grid;
     grid-template-columns: 1fr;
@@ -191,7 +207,7 @@ button:hover, a.button:hover {
     height: auto;
 }
 
-/* Отзывы */
+/* Reviews */
 .reviews {
     position: relative;
     margin: 30px 0;
@@ -227,7 +243,7 @@ button:hover, a.button:hover {
     right: 10px;
 }
 
-/* Контакты */
+/* Contacts */
 .contacts form {
     display: flex;
     flex-direction: column;
@@ -246,7 +262,7 @@ button:hover, a.button:hover {
     align-self: flex-start;
 }
 
-/* Подвал */
+/* Footer */
 .footer {
     background: #f8f9fa;
     padding: 20px 0;
