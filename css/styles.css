@@ -7,13 +7,14 @@
     --color-btn: #007bff;
     --second-color: #821864;
     --light-color: #fff;
+    --banner-bg-color: #11014669;
     --transition: transition: color 0.3s;
 }
 /* Common styles */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    line-height: 1.3;
     color: #333;
     background: linear-gradient(135deg, #5a354a 0%, #9a678a 50%, #5a354a 100%);
     background-attachment: fixed;
@@ -26,10 +27,11 @@ body {
     margin: 0 auto;
 }
 
+
 button, a.button {
     display: inline-block;
     padding: 10px 20px;
-    margin: 10px;
+    margin-bottom: 20px;
     background: var(--color-btn);
     color: #fff;
     text-decoration: none;
@@ -140,26 +142,42 @@ button:hover, a.button:hover {
 
 .no-scroll {
     overflow: hidden;
-    height: 100vh; /* Фіксує висоту сторінки */
+    height: 100vh; 
 }
 
 /* Banner */
 .banner {
+    position: relative; 
     background: url('../img/banner.webp') no-repeat center center/cover;
-    height: 100vh;
-    color: #545c66;
+    color: #fff; 
     text-align: center;
-    padding: 100px 0;
+    padding-top: 120px;
+    z-index: 1;
+    overflow: hidden; 
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--banner-bg-color); 
+    z-index: -1; 
 }
 
 .banner h1 {
     font-size: 28px;
-    margin-bottom: 20px;
+    padding-top:200px;
+    z-index: 1; 
+   
 }
 
 .banner p {
     font-size: 16px;
     margin-bottom: 20px;
+    z-index: 1;
 }
 
 /* Advantages */

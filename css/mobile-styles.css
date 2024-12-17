@@ -1,5 +1,11 @@
 @media (min-width: 768px) {
+    .banner {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
     .banner h1 {
+        padding-top: 130px;
         font-size: 36px;
     }
 
