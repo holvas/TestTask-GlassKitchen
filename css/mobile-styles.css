@@ -17,8 +17,24 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Ховаємо бургер-меню */
     .burger-menu {
         display: none;
+    }
+
+    /* Показуємо горизонтальне меню */
+    .header .menu ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        position: static;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .header .menu ul a {
+        color: #333;
     }
 }
 

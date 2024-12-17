@@ -1,12 +1,23 @@
+/* Подключение шрифта Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* custom properties */
 :root {
     --color: #545c66;
+    --color-btn: #007bff;
+    --second-color: #821864;
+    --light-color: #fff;
+    --transition: transition: color 0.3s;
 }
-/* Общие стили */
+/* Common styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
+    background: linear-gradient(135deg, #5a354a 0%, #9a678a 50%, #5a354a 100%);
+    background-attachment: fixed;
+    position: relative;
 }
 
 .container {
@@ -18,7 +29,7 @@ body {
 button, a.button {
     display: inline-block;
     padding: 10px 20px;
-    background: #007BFF;
+    background: var(--color-btn);
     color: #fff;
     text-decoration: none;
     border: none;
@@ -31,14 +42,21 @@ button:hover, a.button:hover {
     background: #0056b3;
 }
 
-/* Шапка сайта */
+/* Header */
 .header {
     background: #f8f9fa;
     padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #c0c5cc;
     position: fixed;
     width: 100%;
     z-index: 1000;
+}
+
+.wrap-header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header .logo {
@@ -46,29 +64,22 @@ button:hover, a.button:hover {
     font-weight: bold;
 }
 
-.header .menu ul {
+/* .header .menu ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px;
     margin: 0;
     padding: 0;
-}
+} */
 
-.header .menu ul a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-}
-
-.header .menu ul a:hover {
-    color: #007BFF;
-}
-
+/* Burger-menu */
 .burger-menu {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 .burger-menu span {
@@ -77,14 +88,50 @@ button:hover, a.button:hover {
     background: #333;
 }
 
+/* List menu */
+.header .menu ul {
+    list-style: none;
+    display: none; /* За замовчуванням приховано */
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .menu ul a {
+    text-decoration: none;
+    color: #333;
+    transition: var(--transition);
+}
+
+.header .menu ul a:hover {
+    color: var(--light-color);
+    background-color: var(--second-color);
+    padding: 6px;
+    border-radius: 4px;
+    transition: var(--transition);
+
+}
+
+/* Відкрите меню */
 .menu ul.active {
-    display: block;
+    display: flex;
+    position: absolute;
+    top: 73%;
+    right: 26%;
 }
 
 /* Баннер */
 .banner {
-    background: url('../banner.webp') no-repeat center center/cover;
-    color: #545c66;;
+    background: url('../img/banner.webp') no-repeat center center/cover;
+    height: 100vh;
+    color: #545c66;
     text-align: center;
     padding: 100px 0;
 }
@@ -208,11 +255,16 @@ button:hover, a.button:hover {
 
 .footer .social-icons a {
     margin: 0 10px;
-    color: #007BFF;
+    color: var(--color-btn);
     text-decoration: none;
 }
 
 .footer .social-icons a:hover {
     text-decoration: underline;
+}
+
+.icon-instagram {
+    background: black;
+    stroke: #a3318387;
 }
 

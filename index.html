@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кухонные панели на стекле</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/mobile-styles.css">
 </head>
@@ -11,17 +16,27 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <div class="logo">Логотип</div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#banner">Главная</a></li>
-                    <li><a href="#advantages">Преимущества</a></li>
-                    <li><a href="#catalog">Каталог</a></li>
-                    <li><a href="#reviews">Отзывы</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
-                </ul>
-            </nav>
-            <a href="#contacts" class="button order-btn">Заказать</a>
+            <div class="wrap-header">
+                <div class="logo">
+                    <img src="img/glasskitchen-logo.png" alt="Логотип компании GlassKitchen" width="150px" height="150px">
+                </div>
+                <nav class="menu">
+                    <div class="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+    
+                    <ul>
+                        <li><a href="#banner">Главная</a></li>
+                        <li><a href="#advantages">Преимущества</a></li>
+                        <li><a href="#catalog">Каталог</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a href="#contacts" class="button order-btn">Заказать</a>
+            </div>
         </div>
     </header>
 
@@ -158,5 +173,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+     <script src="js/burger-menu.js" defer></script>
 </body>
 </html>
