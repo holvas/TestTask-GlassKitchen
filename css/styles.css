@@ -8,6 +8,10 @@
     --second-color: #821864;
     --light-color: #fff;
     --banner-bg-color: #11014669;
+    --block-bg: #0000003d;
+    --border-color: #ddd;
+    --box-shadow: #ededed;
+    --dark-shadow: rgba(0, 0, 0, 0.2);
     --transition: transition: color 0.3s;
 }
 /* Common styles */
@@ -104,7 +108,7 @@ button:hover, a.button:hover {
 /* List menu */
 .header .menu ul {
     list-style: none;
-    display: none; /* За замовчуванням приховано */
+    display: none; 
     flex-direction: column;
     gap: 15px;
     padding: 20px;
@@ -182,20 +186,34 @@ button:hover, a.button:hover {
 
 /* Advantages */
 .advantages {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); /* Рівномірні квадрати */;
+    gap: 20px;
+    padding: 30px;
+    justify-content: center;
+    text-align: center;
     margin: 30px 0;
 }
 
 .advantage {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-color);
     text-align: center;
-    max-width: 200px;
-    margin-bottom: 20px;
+    background-color: var(--block-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px var(--box-shadow);
+    max-width: 250px;
+    margin-bottom: 40px; 
 }
 
 .advantage .icon {
-    font-size: 30px;
+    width: 56px;
+    height: 56px;
     margin-bottom: 10px;
 }
 
