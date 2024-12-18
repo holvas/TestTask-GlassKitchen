@@ -15,15 +15,24 @@
     }
 
     /* Advantages */
+    .advantages > .container {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        padding: 100px 0;
+        align-content: center;
+        justify-content: center;
+    }
     .advantages {
-        grid-template-columns: 1fr; /* Одна горизонтальна колонка */
-        grid-auto-flow: column; /* Всі елементи йдуть в рядок */
-        justify-content: space-between; /* Розподіл простору між елементами */
+        display: flex; /* Встановлюємо flex */
+        flex-wrap: wrap; /* Дозволяємо переноси, якщо недостатньо місця */
+        gap: 20px; /* Відстань між елементами */
+        justify-content: center;
     }
 
     .advantage {
-        width: 100%; /* Елементи рівномірно розтягуються */
-        max-width: 200px; /* Максимальна ширина для гарного вигляду */
+        width: 180px; 
+        margin-bottom: 0;
     }
 
     .icon-wrap {
@@ -67,6 +76,24 @@
     .wrap-header {
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .advantages {
+        justify-content: space-around;
+    }
+
+    .advantage {
+        max-width: 300px; 
+    }
+
+    .icon-wrapper {
+        width: 120px;
+        height: 120px;
+        font-size: 40px;
+    }
+
+    .advantage h3 {
+        font-size: 20px;
     }
 
     .catalog {
