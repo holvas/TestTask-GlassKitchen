@@ -17,15 +17,24 @@
     /* Advantages */
     .advantages > .container {
         display: flex;
-        /* width: 100%; */
-        gap: 20px;
-        align-content: center;
-        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
     }
 
     .advantage {
-        width: 180px; 
-        margin-bottom: 0;
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .advantage h3 {
+        font-size: x-large;
+        padding: 10px 0;
+    }
+
+    .advantages h2, .catalog h2, .contacts h2, .reviews h2 {
+        font-size: 38px;
+        margin-bottom: 40px;
     }
 
     .icon-wrap {
@@ -35,7 +44,7 @@
     }
 
     .advantage p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     /* Catalog */
@@ -56,6 +65,11 @@
     }
 
     /* Review */
+    .review p {
+        max-width: 300px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
     .slider-btn.prev {
         left: 20%;
     }
@@ -92,8 +106,8 @@
         justify-content: space-around;
     }
 
-    .container > .advantages {
-        flex-wrap: nowrap;
+    .advantages > .container  {
+        flex-direction: row;
         justify-content: space-around;
     }
 
@@ -117,9 +131,8 @@
     }
 
    .catalog {
-        display: flex;
+        /* display: flex; */
         grid-template-columns: repeat(4, 1fr);
-         /* flex-basis: calc((100% - 2* 24px) / 3);*/
     } 
 
     .catalog > .container {

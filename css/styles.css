@@ -1,35 +1,50 @@
 /* Google font*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Dropped styles */
+h1,h2,h3,p {
+    margin: 0;
+    text-align: center;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+  }
+
 /* Custom properties */
 :root {
     --color: #545c66;
     --color-btn: #02f3d6;
+    --hover-btn: #04bba5;
     --second-color: #821864;
     --second-color-tr: #821864b5;
     --light-pink: #ecb8f0;
     --light-pink-tr: #ecb8f096;
     --light-color: #fff;
-    --banner-bg-color: #11014669;
+    --dark-bg-color: #11014669;
+    --light-bg-color: aliceblue;
     --block-bg: #0000003d;
     --border-color: #ddd;
     --box-shadow: #ededed;
     --dark-shadow: rgba(0, 0, 0, 0.2);
     --transition: transition: color 0.3s;
+    --dark-text: #333;
+    --light-text: aliceblue;
 }
 /* Common styles */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     line-height: 1.3;
-    color: #333;
+    color: var(--light-text);
     background: linear-gradient(135deg, #5a354a 0%, #9a678a 50%, #5a354a 100%);
     background-attachment: fixed;
     position: relative;
 }
 
 .container {
-    /* width: 90%; */
+    padding: 0 12px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -43,7 +58,7 @@ button, a.button {
     padding: 10px 20px;
     margin-bottom: 20px;
     background: var(--color-btn);
-    color: #fff;
+    color: var(--dark-text);
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -52,12 +67,12 @@ button, a.button {
 }
 
 button:hover, a.button:hover {
-    background: #0056b3;
+    background: var(--hover-btn);
 }
 
 /* Header */
 .header {
-    background: #f8f9fa;
+    background: var(--light-bg-color);
     padding: 10px 0;
     border-bottom: 1px solid #c0c5cc;
     position: fixed;
@@ -135,7 +150,7 @@ button:hover, a.button:hover {
 
 .header .menu ul a:hover {
     color: var(--light-color);
-    background-color: var(--second-color);
+    background-color: var(--hover-btn);
     padding: 6px;
     border-radius: 4px;
     transition: var(--transition);
@@ -173,7 +188,7 @@ button:hover, a.button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--banner-bg-color); 
+    background-color: var(--dark-bg-color); 
     z-index: -1; 
 }
 
@@ -195,11 +210,14 @@ button:hover, a.button:hover {
     display: grid;
     grid-template-columns: 1fr; 
     gap: 20px;
-    /* padding: 100px 0; */
     justify-content: center;
     text-align: center;
     background-color: rgb(67, 1, 67);
-    /* margin: 150px 0; */
+}
+
+h2 {
+    color: var(--light-text);
+    font-size: 32px;
 }
 
 .advantage {
@@ -216,6 +234,7 @@ button:hover, a.button:hover {
     box-shadow: 0 4px 6px var(--box-shadow);
     margin-bottom: 40px; 
 }
+
 .advantage:last-child, .catalog:last-child {
     margin-bottom: 0
 };
@@ -252,8 +271,13 @@ button:hover, a.button:hover {
     padding: 100px 0;
 }
 
+.catalog h2 {
+    padding: 0 12px;
+    margin-bottom: 20px;
+}
+
 .catalog > .container {
-    width: 90%;
+    padding: 0 12px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -280,11 +304,22 @@ button:hover, a.button:hover {
     object-fit: cover;
 }
 
+.card h3 {
+    color: var(--dark-text);
+    padding: 10px  0;
+}
+
 /* Reviews */
 .reviews {
     position: relative;
     margin: 30px 0;
     overflow: hidden;
+    color: var(--light-color);
+    background-color: var(--light-bg-color);
+}
+
+.reviews h2 {
+    color: var(--dark-text);
 }
 
 .review {
@@ -303,9 +338,18 @@ button:hover, a.button:hover {
     box-shadow: 0 0 4px 6px var(--dark-shadow);
 }
 
+.review p {
+    padding: 8px 0;
+    margin-top: 20px;
+    background-color: var(--dark-bg-color);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 4px 6px var(--dark-shadow);
+    border-radius: 6px;
+}
+
 .slider-btn {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     background: var(--light-pink-tr);
     color: var(--second-color);
@@ -347,17 +391,36 @@ button:hover, a.button:hover {
 
 .contacts input, .contacts textarea {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
+    color: var(--second-color);
+    font-size: 16px;
 }
 
+.contacts p {
+    font-size: 18px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--color);
+    opacity: 0.5;
+  }
+
+  input:focus, 
+  input:active,
+  textarea:focus, 
+  textarea:active {
+    border: 1px solid var(--hover-btn);
+  }
 .contacts button {
     align-self: flex-start;
 }
 
 /* Footer */
 .footer {
-    background: #f8f9fa;
+    background: var(--light-bg-color);
     padding: 20px 0;
     text-align: center;
 }
