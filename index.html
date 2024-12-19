@@ -57,25 +57,53 @@
     <section id="advantages" class="advantages">
         <div class="container">
             <div class="advantage">
-                <div class="icon-wrap">
-                    <svg class="icon icon-sponge" width="32px" height="32px">
+                <div class="icon-wrap" 
+                style="width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--light-color);
+                box-shadow: 0 0 10px 2px #c5b7eb;
+                border-radius: 50%;
+                margin-bottom: 15px;
+                font-size: 24px;">
+                    <svg class="icon icon-sponge" width="56px" height="56px">
                         <use xlink:href="img/symbol-defs.svg#icon-sponge"></use>
                     </svg>
                 </div>
                 <p>Лёгкость ухода</p>
             </div>
             <div class="advantage">
-                <div class="icon-wrap">
+                <div class="icon-wrap" style="width: 80px;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--light-color);
+                box-shadow: 0 0 10px 2px #c5b7eb;
+                border-radius: 50%;
+                margin-bottom: 15px;
+                font-size: 24px;">
                     <svg class="icon icon-safety">
-                        <use xlink:href="img/symbol-defs.svg#icon-safety"></use>
+                        <use xlink:href="img/symbol-defs.svg#icon-safety" width="56px" height="56px"></use>
                     </svg>
                 </div>
                 <p>Стойкость к повреждениям</p>
             </div>
             <div class="advantage">
                 <div class="icon-wrap">
-                    <svg class="icon icon-painting">
-                        <use xlink:href="img/symbol-defs.svg#icon-painting"></use>
+                    <svg class="icon icon-painting" style="width: 80px;
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: var(--light-color);
+                    box-shadow: 0 0 10px 2px #c5b7eb;
+                    border-radius: 50%;
+                    margin-bottom: 15px;
+                    font-size: 24px;">
+                        <use xlink:href="img/symbol-defs.svg#icon-painting" width="56px" height="56px"></use>
                     </svg>
                 </div>
                 <p>Индивидуальный дизайн</p>
@@ -92,7 +120,7 @@
                 <a href="#" class="button">Подробнее</a>
             </div>
             <div class="card">
-                <img src="img/kitchen-panel-02.webp" alt="Кухонная панель 2">
+                <img src="img/kitchen-panel-04.webp" alt="Кухонная панель 2">
                 <p>Кухонная панель 2</p>
                 <a href="#" class="button">Подробнее</a>
             </div>
@@ -102,7 +130,8 @@
                 <a href="#" class="button">Подробнее</a>
             </div>
             <div class="card">
-                <img src="img/kitchen-panel-04.webp" alt="Кухонная панель 4">
+                <img src="img/kitchen-panel-02.webp" alt="Кухонная панель 4">
+                
                 <p>Кухонная панель 4</p>
                 <a href="#" class="button">Подробнее</a>
             </div>
@@ -113,18 +142,21 @@
     <section id="reviews" class="reviews">
         <div class="container">
             <div class="review-slider">
-                <div class="review">
+                <div class="review active">
                     <img src="img/ivanov.jpg" alt="Клиент 1">
                     <p><strong>Иван Иванов:</strong> Отличные панели, очень понравились!</p>
                 </div>
-                <div class="review">
+                <div class="review active">
                     <img src="img/smirnova.jpg" alt="Клиент 2">
                     <p><strong>Анна Смирнова:</strong> Качественно и стильно. Рекомендую!</p>
                 </div>
-                <div class="review">
+                <div class="review active">
                     <img src="img/petrov.jpg" alt="Клиент 3">
                     <p><strong>Петр Петров:</strong> Быстро доставили и установили. Спасибо!</p>
                 </div>
+
+                <button class="slider-btn prev"></button>
+                <button class="slider-btn next"></button>
             </div>
         </div>
     </section>
@@ -180,5 +212,6 @@
 
     <!-- Scripts -->
      <script src="js/burger-menu.js" defer></script>
+     <script src="js/reviews.js" defer></script>
 </body>
 </html>

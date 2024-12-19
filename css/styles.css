@@ -4,8 +4,11 @@
 /* Custom properties */
 :root {
     --color: #545c66;
-    --color-btn: #007bff;
+    --color-btn: #02f3d6;
     --second-color: #821864;
+    --second-color-tr: #821864b5;
+    --light-pink: #ecb8f0;
+    --light-pink-tr: #ecb8f096;
     --light-color: #fff;
     --banner-bg-color: #11014669;
     --block-bg: #0000003d;
@@ -26,11 +29,14 @@ body {
 }
 
 .container {
-    width: 90%;
+    /* width: 90%; */
     max-width: 1200px;
     margin: 0 auto;
 }
 
+section {
+    padding: 100px 0;
+}
 
 button, a.button {
     display: inline-block;
@@ -189,7 +195,7 @@ button:hover, a.button:hover {
     display: grid;
     grid-template-columns: 1fr; 
     gap: 20px;
-    padding: 60px 0;
+    /* padding: 100px 0; */
     justify-content: center;
     text-align: center;
     background-color: rgb(67, 1, 67);
@@ -210,6 +216,9 @@ button:hover, a.button:hover {
     box-shadow: 0 4px 6px var(--box-shadow);
     margin-bottom: 40px; 
 }
+.advantage:last-child, .catalog:last-child {
+    margin-bottom: 0
+};
 
 .icon-wrap {
     width: 80px;
@@ -237,19 +246,27 @@ button:hover, a.button:hover {
 
 /* Catalog */
 .catalog {
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 1fr;
     gap: 20px;
-    margin: 30px 0;
+    padding: 100px 0;
+}
+
+.catalog > .container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
     background: #fff;
     border: 1px solid #ddd;
+    box-shadow: 0 4px 6px var(--box-shadow);
     border-radius: 5px;
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s;
+    margin-bottom: 40px;
 }
 
 .card:hover {
@@ -257,8 +274,10 @@ button:hover, a.button:hover {
 }
 
 .card img {
+    display: block;
     max-width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
 }
 
 /* Reviews */
@@ -278,23 +297,43 @@ button:hover, a.button:hover {
     display: block;
 }
 
+.review img {
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 0 4px 6px var(--dark-shadow);
+}
+
 .slider-btn {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background: var(--light-pink-tr);
+    color: var(--second-color);
+    font-weight: 700;
     border: none;
     cursor: pointer;
     padding: 10px;
+}
+
+.slider-btn:hover {
+    color: var(--light-pink);
+    background: var(--second-color-tr);
 }
 
 .slider-btn.prev {
     left: 10px;
 }
 
+.slider-btn.prev::before {
+    content: '<';
+}
+
 .slider-btn.next {
     right: 10px;
+}
+
+.slider-btn.next::before {
+    content: '>';
 }
 
 /* Contacts */

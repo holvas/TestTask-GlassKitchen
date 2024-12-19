@@ -17,16 +17,9 @@
     /* Advantages */
     .advantages > .container {
         display: flex;
-        width: 100%;
+        /* width: 100%; */
         gap: 20px;
-        padding: 100px 0;
         align-content: center;
-        justify-content: center;
-    }
-    .advantages {
-        display: flex; /* Встановлюємо flex */
-        flex-wrap: wrap; /* Дозволяємо переноси, якщо недостатньо місця */
-        gap: 20px; /* Відстань між елементами */
         justify-content: center;
     }
 
@@ -48,6 +41,27 @@
     /* Catalog */
     .catalog {
         grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .catalog > .container {
+        gap: 40px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* Review */
+    .slider-btn.prev {
+        left: 20%;
+    }
+
+    .slider-btn.next {
+        right: 20%;
     }
 
     /* Hidden burger-menu */
@@ -78,15 +92,21 @@
         justify-content: space-around;
     }
 
-    .advantages {
+    .container > .advantages {
+        flex-wrap: nowrap;
         justify-content: space-around;
     }
 
-    .advantage {
-        max-width: 300px; 
+    section > .advantages {
+        height: 500px;
     }
 
-    .icon-wrapper {
+    .advantage {
+        width: calc((100% - 60px) / 3); /* Три рівних блоки */
+        /* max-width: 300px;  */
+    }
+
+    .icon-wrap {
         width: 120px;
         height: 120px;
         font-size: 40px;
@@ -96,9 +116,20 @@
         font-size: 20px;
     }
 
-    .catalog {
+   .catalog {
         display: flex;
         grid-template-columns: repeat(4, 1fr);
+         /* flex-basis: calc((100% - 2* 24px) / 3);*/
+    } 
+
+    .catalog > .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .card {
+        max-width:426px;
     }
 
     .banner h1 {
